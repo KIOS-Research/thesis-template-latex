@@ -15,4 +15,4 @@ How to install LaTeX
 UCY Guidelines
 =====================
 
-[Format Requirements] (http://www.ucy.ac.cy/data/scienceed/odigies%20katathesis%20didaktorikis%20diatribis%20sti%20bibliothiki.pdf)
+[Format Requirements] (http://ermis.lib.ucy.ac.cy/Databases/Staff/Default.aspx?KwID=diatribes&Kwtxt=%CE%94%CE%B9%CE%B4%CE%B1%CE%BA%CF%84%CE%BF%CF%81%CE%B9%CE%BA%CE%AD%CF%82%20%CE%94%CE%B9%CE%B1%CF%84%CF%81%CE%B9%CE%B2%CE%AD%CF%82)
