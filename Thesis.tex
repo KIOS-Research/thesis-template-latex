@@ -1,0 +1,92 @@
+%Instructions:
+%	Open UCY.STY and include all the information required by replacing the canned text
+% 	If you would like to use greek, you need to compile using the xelatex command (just replace `pdflatex' with `xelatex' in your TeX-editor. Also the editor must be able to save the text-file in UTF-8 (this was tested with TeXMaker).
+
+%	YOU ARE HIGHLY ADVIDED TO USE xelatex INSTEAD OF pdflatex, for better support of languages and figures of all format.
+
+\documentclass[a4paper,12pt,openright]{book}
+\usepackage{ucy}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\renewcommand{\headrulewidth}{0.0pt}
+\makenomenclature
+\begin{document}
+
+%\setlanguage{american}
+
+
+\committeechair{Dr. Name Surname}
+\majoradviser{Dr. Name Surname}
+\associateadviser{Dr. Name Surname}
+\associateadviser{Dr. Name Surname}
+\associateadviser{Dr. Name Surname}
+
+
+\pagenumbering{roman}
+\coverpage
+\copyrightpage
+\approvalpage
+
+\onehalfspace
+\chapter*{Abstract}
+Abstract in English
+
+%\chapter*{Περίληψη} % CONFIRM THAT YOUR EDITOR SUPPORTS UTF-8
+%\setlanguage{greek}
+% For abstracts in greek, please use with XeLaTeX compiler. Instructions in UCY.STY
+%\setlanguage{american}
+
+
+\chapter*{Acknowledgments}
+Acknowledgments go here.
+
+
+\chapter*{Publications}
+
+\begin{center}
+\textbf{Published journal publications}
+\end{center}
+\begin{enumerate}
+\item A journal Article (in IEEE reference format)
+\end{enumerate}
+
+\begin{center}
+\textbf{Published conference proceedings}
+\end{center}
+
+\begin{enumerate}
+\item A conference article (in IEEE reference format)
+\end{enumerate}
+
+\begin{center}
+\textbf{Unpublished}
+\end{center}
+
+
+\tableofcontents
+
+\vspace{1in}
+
+\printnomenclature
+\listoffigures
+\listoftables
+
+%
+%\newpage
+
+\include{chap1} %add each chapters separetly
+
+
+\singlespace
+
+\bibliographystyle{IEEEtranS} % to sort references based on first author's surname instead of order of appearance in text.
+\bibliography{IEEEfull,Thesis} %use the full names of the IEEE journals. Here Thesis.bib is assumed 
+
+%\appendix
+%\include{appendixA}
+
+
+\end{document}
+
+
