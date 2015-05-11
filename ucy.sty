@@ -7,15 +7,19 @@
 \usepackage{amsmath, amsthm, amssymb} 
 \usepackage{pxfonts}
 
+% Fill in the publication details below
+\newcommand{\authorName}{Name Surname}
+\newcommand{\thesisTitle}{Thesis Title}
+\newcommand{\pubMonth}{Month}
+\newcommand{\pubYear}{Year}
 
 %\usepackage{ifxetex}
 %\ifxetex
-%	\usepackage{fontspec,xunicode,xltxtra}
-%	\setmainfont[Mapping=tex-text,Ligatures=Common]{Minion Pro} % font provided by Acrobat Reader
-%	\usepackage{xgreek}  
-%	%switch between greek and english with \setlanguage{american} or \setlanguage{greek} 
+%    \usepackage{fontspec,xunicode,xltxtra}
+%    \setmainfont[Mapping=tex-text,Ligatures=Common]{Minion Pro} % font provided by Acrobat Reader
+%    \usepackage{xgreek}  
+%    %switch between greek and english with \setlanguage{american} or \setlanguage{greek} 
 %\fi
-
 
 %
 \def\prefacename{Preface}%
@@ -41,71 +45,65 @@
 \def\glossaryname{Glossary}%
 \def\listsymbolsname{List of Symbols}%
 
-
 %
 \usepackage{graphicx}
 \usepackage[hyphens]{url}
 \usepackage{cite}
 \usepackage{nomencl}
 
-
 \newtheorem{example}{Example}[section]
-\def\abs#1{\mathopen| #1 \mathclose|}	% use instead of $|x|$ 
+\def\abs#1{\mathopen| #1 \mathclose|}    % use instead of $|x|$ 
 \def\norm#1{\mathopen\| #1 \mathclose\|}% use instead of $\|x\|$ 
 \newenvironment{remark}[1][Remark:]{\begin{trivlist}
 \item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
 \numberwithin{equation}{chapter} %sets equation numbers <chapter>.<section>.<index>
 \numberwithin{figure}{chapter} %sets equation numbers <chapter>.<section>.<index>
 
-
 \def\singlespace{\def\baselinestretch{1}
-  		 \ifx\@currsize\normalsize\@normalsize\else\@currsize\fi}
+    \ifx\@currsize\normalsize\@normalsize\else\@currsize\fi}
 \def\onehalfspace{\def\baselinestretch{1.5}
-  		 \ifx\@currsize\normalsize\@normalsize\else\@currsize\fi}
-	\def\doublespace{\def\baselinestretch{2}
-  		 \ifx\@currsize\normalsize\@normalsize\else\@currsize\fi}			
-			
+    \ifx\@currsize\normalsize\@normalsize\else\@currsize\fi}
+\def\doublespace{\def\baselinestretch{2}
+    \ifx\@currsize\normalsize\@normalsize\else\@currsize\fi}
 
 \def\coverpage{%
-	\thispagestyle{empty}%
-\doublespace
-	\begin{center}
-\begin{figure}[htbp]
-	\centering
-		\includegraphics[scale=0.90]{ucylogo.eps}
-	\label{figucylogo2}
-\end{figure}
-Department of Electrical and Computer Engineering\\
-	\vspace*{1.3in}
-	{\expandafter{\bf\Large Thesis Title}}\\
-	\vspace*{0.5in}
-	{\large Name Surname}\\
-	\vspace*{1in}
-	A Dissertation\\
-                Submitted in Partial Fulfillment of the\\
-                Requirements for the Degree of\\ 
-                Doctor of Philosophy\\
-                at the University of Cyprus%\\
-	\end{center}
-	\vspace*{.5in}
-	\begin{center}
-	\vfill
-	June, 2011%\the\year
-	\end{center}
-	\newpage}
-	
-	
-	\def\copyrightpage{%
-	\null\vfill
-        \thispagestyle{empty}
-	\begin{center}
-		\copyright~Author's Name,~2011
-	\end{center}
-	\vfill\newpage}
-	
-	
-	
-	
+    \thispagestyle{empty}%
+    \doublespace
+    \begin{center}
+        \begin{figure}[htbp]
+            \centering
+                \includegraphics[scale=0.90]{ucylogo.eps}
+            \label{figucylogo2}
+        \end{figure}
+        Department of Electrical and Computer Engineering\\
+        \vspace*{1.3in}
+        {\expandafter{\bf\Large \thesisTitle}}\\
+        \vspace*{0.5in}
+        {\large \authorName}\\
+        \vspace*{1in}
+        A Dissertation\\
+        Submitted in Partial Fulfillment of the\\
+        Requirements for the Degree of\\ 
+        Doctor of Philosophy\\
+        at the University of Cyprus%\\
+    \end{center}
+    \vspace*{.5in}
+    \begin{center}
+        \vfill
+        \pubMonth, \pubYear%\the\year
+    \end{center}
+    \newpage
+}
+        
+\def\copyrightpage{%
+    \null\vfill
+    \thispagestyle{empty}
+    \begin{center}
+        \copyright~\authorName,~\pubYear
+    \end{center}
+    \vfill\newpage
+}
+    
 \newskip\advisersep \advisersep 0.2in plus 0.2in
 \newskip\advisersheight \advisersheight 4.5in 
 \newinsert\ucy@advisers \dimen\ucy@advisers \advisersheight
@@ -118,39 +116,39 @@ Department of Electrical and Computer Engineering\\
 \def\associateadviser#1{
    \insert\ucy@advisers{\vskip\advisersep \sigassoc{Committee Member}{#1}}
 }
+
 % Macro for major advisor signature.
 \long\def\sigchair#1#2{
-	\hbox to 5.75in{\shortstack{ #1\\[1 em]}
-			\hfil 
-			\shortstack[l]{\vrule width 4.25in height 0.2pt \\ 
-			\hspace*{1.5in} #2}}}
+    \hbox to 5.75in{\shortstack{ #1\\[1 em]}
+    \hfil 
+    \shortstack[l]{\vrule width 4.25in height 0.2pt \\ 
+    \hspace*{1.5in} #2}}}
 % Macro for major advisor signature.
 \long\def\sigmajor#1#2{
-	\hbox to 5.75in{\shortstack{ #1\\[1 em]}
-			\hfil 
-			\shortstack[l]{\vrule width 4.25in height 0.2pt \\ 
-			\hspace*{1.5in} #2}}}
+    \hbox to 5.75in{\shortstack{ #1\\[1 em]}
+    \hfil 
+    \shortstack[l]{\vrule width 4.25in height 0.2pt \\ 
+    \hspace*{1.5in} #2}}}
 % Macro for associate advisor signatures.
 \long\def\sigassoc#1#2{
-	\hbox to 5.75in{\shortstack{ #1\\[1 em]}
-			\hfil 
-			\shortstack[l]{\vrule width 4.25in height 0.2pt \\ 
-			               \hspace*{1.5in} #2}}
+    \hbox to 5.75in{\shortstack{ #1\\[1 em]}
+    \hfil 
+    \shortstack[l]{\vrule width 4.25in height 0.2pt \\ 
+    \hspace*{1.5in} #2}}
 }
+
 \def\approvalpage{%
-        \vspace*{.25in}
-	\begin{center}
-	{\Large\bf APPROVAL PAGE} \\
-	\vspace*{.1 in}
-	Name Surname \\
-	\vspace{.1in}
-	{\bf Thesis Title} \\
-	\vspace{.1in}
-		\end{center}
-\textit{The present Doctorate Dissertation was submitted in partial fulfillment of the requirements for the Degree of Doctor of Philosophy in the Department of Electrical and Computer Engineering, and was approved on June 24, 2011 by the members of the Examination Committee.}\\
-	%\vfill
-		\vspace{1in}
-        \vbox to\advisersheight{\unvbox\ucy@advisers}
-	\newpage
-	}
-	
+    \vspace*{.25in}
+    \begin{center}
+        {\Large\bf APPROVAL PAGE} \\
+        \vspace*{.1 in}
+        \authorName\\
+        \vspace{.1in}
+        {\bf \thesisTitle} \\
+        \vspace{.1in}
+    \end{center}
+    \textit{The present Doctorate Dissertation was submitted in partial fulfillment of the requirements for the Degree of Doctor of Philosophy in the Department of Electrical and Computer Engineering, and was approved on \pubMonth 24, \pubYear by the members of the Examination Committee.}\\
+    \vspace{1in}
+    \vbox to\advisersheight{\unvbox\ucy@advisers}
+    \newpage
+}
